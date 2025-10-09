@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Governance & Compliance for Religious Organizations - Ndakala Advisory</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+:root {
+  --primary:#0056A6; --accent:#c9a646; --bg:#f4f6f8;
+  --muted:#666; --danger:#e74c3c; --ok:#4CAF50;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins','Segoe UI',Tahoma,sans-serif;
+  background:var(--bg);
+  min-height:100vh; padding:40px 0;
+  background-image:
+    linear-gradient(rgba(244,246,248,.92),rgba(244,246,248,.96)),
+    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80');
+  background-size:cover;background-position:center;
+}
+.container{
+  max-width:700px;margin:40px auto;background:#fff;border-radius:16px;
+  box-shadow:0 8px 32px rgba(0,86,166,.13);overflow:hidden;
+}
+.header{
+  background:linear-gradient(135deg,var(--primary),#357abd);
+  color:#fff;padding:32px 32px 22px;text-align:center;
+}
+.logo img{max-width:180px;display:block;margin:0 auto 10px;filter:brightness(0) invert(1)}
+.seminar-title{font-size:22px;margin-bottom:12px;font-weight:600}
+.seminar-details{font-size:15px;line-height:1.7}
+.form-section{padding:34px 34px 26px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;color:var(--primary);font-weight:600;margin-bottom:8px;font-size:14px}
+.required::after{content:" *";color:var(--danger)}
+.form-group input,.form-group select{
+  width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:16px;background:#f9fafb;
+}
+.form-group input:focus,.form-group select:focus{
+  outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(0,86,166,.10)
+}
+.helper-text{font-size:12px;color:var(--muted);margin-top:6px}
+.total-amount{
+  background:#f8f9fa;border:1px solid #eee;padding:16px;border-radius:10px;margin:10px 0 18px
+}
+.total-amount .amount{font-size:20px;font-weight:800;color:var(--primary)}
+.checkbox-group{display:flex;gap:8px;align-items:center}
+.checkbox-group input[type=checkbox]{width:16px;height:16px;margin:0;accent-color:var(--primary)}
+.checkbox-group label{font-weight:normal;margin-bottom:0;font-size:14px;color:var(--muted)}
+.checkbox-group a{color:var(--primary);text-decoration:none}
+.checkbox-group a:hover{text-decoration:underline}
+.submit-btn{
+  width:100%;background:linear-gradient(135deg,var(--primary),#357abd);
+  color:#fff;padding:15px;border:none;border-radius:10px;font-size:16px;font-weight:700;
+  cursor:pointer;transition:.25s;letter-spacing:.3px;text-transform:uppercase
+}
+.submit-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,86,166,.13)}
+.security-note{
+  text-align:center;margin-top:18px;font-size:12px;color:var(--muted);
+  padding-top:14px;border-top:1px solid #eee
+}
+.error-message{
+  background:#fee;color:#c33;padding:12px;border-radius:8px;margin:12px 0;border-left:4px solid var(--danger);font-weight:500
+}
+.thankyou-popup{
+  position:fixed;left:50%;top:18%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--primary),#357abd);
+  color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);
+  z-index:2000;max-width:90%;text-align:center
+}
+@media (max-width:600px){
+  .container{margin:10px}
+  .submit-btn{padding:12px}
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="https://ndakalaadvisory.co.ke/wp-content/uploads/2024/10/NDAKALA-LOGO-01-01-01-1024x251.png" alt="Ndakala Advisory Logo">
+      </div>
+      <div class="seminar-title"><i class="fa-solid fa-file-signature"></i> Governance & Compliance for Religious Organizations Registration</div>
+      <div class="seminar-details">
+        <strong><i class="fa-solid fa-map-marker-alt"></i> Venue:</strong> The Glee Hotel, Nairobi<br>
+        <strong><i class="fa-solid fa-calendar"></i> Date:</strong> Thursday, 6th November 2025<br>
+        <strong><i class="fa-solid fa-clock"></i> Time:</strong> 8:00 AM – 1:00 PM<br>
+        <strong><i class="fa-solid fa-dollar-sign"></i> Fee:</strong> KES 20,000 per person
+      </div>
+    </div>
+
+    <form class="form-section" id="registrationForm" novalidate>
+      <div class="form-group">
+        <label for="fullName" class="required"><i class="fa-solid fa-user"></i> Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="John Oyaro" maxlength="100" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="required"><i class="fa-solid fa-envelope"></i> Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" maxlength="100" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="required"><i class="fa-solid fa-phone"></i> Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254701548633" required>
+      </div>
+
+      <div class="form-group">
+        <label for="organization"><i class="fa-solid fa-building"></i> Organization (Optional)</label>
+        <input type="text" id="organization" name="organization" maxlength="100" placeholder="Ndakala Advisory">
+      </div>
+
+      <div class="form-group">
+        <label for="attendees" class="required"><i class="fa-solid fa-users"></i> Number of Attendees</label>
+        <input type="number" id="attendees" name="attendees" value="1" min="1" max="20" required>
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod" class="required"><i class="fa-solid fa-credit-card"></i> Preferred Payment Method</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="">Select payment method</option>
+          <option value="mpesa">M-Pesa</option>
+          <option value="card">Card</option>
+          <option value="cheque">Cheque</option>
+        </select>
+      </div>
+
+      <div id="paymentDetails" style="display:none;background:#f9fafb;border:1px solid #eee;padding:12px 14px;border-radius:8px;margin-bottom:12px;color:var(--primary);font-size:14px;"></div>
+
+      <div class="total-amount">
+        <label><i class="fa-solid fa-calculator"></i> Total Amount (KES)</label>
+        <div class="amount" id="totalAmount">20,000</div>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the <a href="#" id="privacyPolicyLink">Privacy Policy</a>.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Complete Registration</button>
+
+      <div class="security-note">
+        Your data is secure and used only for this Seminar<br>
+        Contact <strong>info@ndakalaadvisory.co.ke</strong> | <strong>+254 705 874715</strong><br>
+        Powered by <strong>Ndakala Advisory LLP</strong>
+      </div>
+    </form>
+  </div>
+
+<script>
+const PRICE = 20000;
+function updateTotal(){
+  const n = Math.max(1, parseInt(document.getElementById('attendees').value,10) || 1);
+  document.getElementById('totalAmount').textContent = (n * PRICE).toLocaleString();
+}
+function renderPaymentDetails(method){
+  const box = document.getElementById('paymentDetails');
+  let html = '';
+  if(method==='mpesa'){
+    html = `<strong>M-Pesa Paybill:</strong> 488488<br><strong>Account:</strong> 8964610016<br>
+    <span style="color:var(--muted)">Forward confirmation SMS to <strong>info@ndakalaadvisory.co.ke</strong></span>`;
+  } else if(method==='card'){
+    html = `You’ll receive a secure payment link via email (Visa/MasterCard accepted).`;
+  } else if(method==='cheque'){
+    html = `<strong>Payee:</strong> Ndakala Advisory LLP<br><span style="color:var(--muted)">Deliver cheque before event date.</span>`;
+  }
+  box.innerHTML = html;
+  box.style.display = method ? 'block' : 'none';
+}
+
+document.getElementById('attendees').addEventListener('input', updateTotal);
+document.getElementById('paymentMethod').addEventListener('change', e=>renderPaymentDetails(e.target.value));
+
+document.getElementById('registrationForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.submit-btn');
+  const original = btn.textContent;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...'; btn.disabled = true;
+
+  const data = new FormData(form);
+  try{
+    const resp = await fetch('submit.php', {method:'POST', body:data});
+    const res = await resp.json();
+    if(res.success){
+      showThankYou('Registration successful! Redirecting...');
+      setTimeout(()=>{ window.location.href='thankyou.html'; },3000);
+      form.reset(); updateTotal();
+    }else{
+      showError(res.message || 'Registration failed.');
+    }
+  }catch(err){
+    showError('Network error, please try again.');
+  }finally{
+    btn.innerHTML = original; btn.disabled = false;
+  }
+});
+
+function showError(msg){
+  const form = document.getElementById('registrationForm');
+  const old = form.querySelector('.error-message'); if(old) old.remove();
+  const div = document.createElement('div');
+  div.className='error-message'; div.textContent=msg;
+  form.insertBefore(div, form.querySelector('.submit-btn'));
+  setTimeout(()=>div.remove(),8000);
+}
+function showThankYou(msg){
+  const popup = document.createElement('div');
+  popup.className='thankyou-popup'; popup.innerHTML=`<p><strong>${msg}</strong></p>`;
+  document.body.appendChild(popup);
+  setTimeout(()=>popup.remove(),2500);
+}
+updateTotal();
+</script>
+</body>
+</html>
